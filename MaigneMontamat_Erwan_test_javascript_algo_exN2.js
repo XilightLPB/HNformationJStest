@@ -1,3 +1,4 @@
+//Full exercise
 function TestRow(row){
     let references= [0,0,0,0,0,0,0,0,0];
     res = true;

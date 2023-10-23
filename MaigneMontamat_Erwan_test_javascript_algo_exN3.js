@@ -90,6 +90,9 @@ function TestAllRegion(table){
     console.log(region);
 }
 
+
+
+
 //if you want everything in one function there it is, Question 4
 function TestTheGrid(table){
     let region =[];
@@ -230,7 +233,7 @@ function TestTheGrid(table){
 }
 
 
-
+//question 5
 function DisplayIssues(table){
     let toworkwith = TestTheGrid(table);
 
@@ -242,7 +245,16 @@ function DisplayIssues(table){
     else{
         console.log("the results are wrong");
         LogTheGrid(toworkwith);
-        LetsDisplayIt(toworkwith, "Issues");
+        let tableau = document.getElementById("Issues");
+        for (let row = 0; row< toworkwith.length; row++){
+
+            tableau.insertRow();
+
+            for (let col = 0; col<10; col++){
+                let Cell = tableau.rows[tableau.rows.length - 1].insertCell();
+                Cell.textContent = toworkwith[row][col];
+            }
+        }
     }
 }
 
