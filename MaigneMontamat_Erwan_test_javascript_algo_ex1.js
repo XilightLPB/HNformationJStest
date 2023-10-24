@@ -41,17 +41,17 @@ function FromSubjectToUseable(toReceive, grid){
   for (let i = 0; i<9; i++)
   {
     lign = grid[i].replaceAll(' ', '');
-    console.log(lign);
+    //console.log(lign);
     lign = Number(lign);
-    console.log(typeof(lign));
+    //console.log(typeof(lign));
     for( let j = 0; j<9; j++)
     {
-      toReceive[i][j]= lign%10;
+      toReceive[i][9-(j+1)]= lign%10;
       lign=Math.floor(lign/10);
     }
   }
-  console.log("This may be the grid of the subject")
-  console.log(toReceive);
+  //console.log("This may be the grid of the subject")
+  //console.log(toReceive);
   
 }
 
